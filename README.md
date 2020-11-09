@@ -56,43 +56,29 @@
 * [Bootstrap v4](https://getbootstrap.com/) component library
 * [React datepicker v2](https://www.npmjs.com/package/react-datepicker)
 * [Axios](https://www.npmjs.com/package/axios) promise-based http client
+* [SVG Backgrounds](https://www.svgbackgrounds.com/) source of custom backgrounds with compact file-size (~5KB) & supported by all modern browsers
 
 ## :floppy_disk: Setup - Backend
 
-* Change to `/backend` directory
+* Change to `/server` directory
 * Install dependencies using `npm i`
 * Install [nodemon](https://www.npmjs.com/package/nodemon) globally if you don't already have it
 * Register with [MongoDB Atlas](www.mongodb.com), create & configure a database cluster and add cluster connection string to .env file
-* Run `nodemon server` for a dev server
+* Run `nodemon index.js` for a dev server
 * Navigate to `http://localhost:5000/`. The server will automatically reload if you change any of the source files
 
 ### :floppy_disk: Setup - Frontend
 
-* From top-level directory `mern-stack-tracker` run `npm start`. Frontend will open at `http://localhost:3000/`
+* Change to `/client` directory
+* Install dependencies using `npm i`
+* Run `npm start`. Frontend will open at `http://localhost:3000/`
 
 ## :computer: Code Examples
 
-* Extract from `server.js` - connects to database using mongoose
+* Extract from `` - tba
 
 ```javascript
-const uri = process.env.ATLAS_URI;
-const options = {
-  useNewUrlParser: true,
-  useCreateIndex: true,
-  useUnifiedTopology: true
-}
 
-mongoose
-  .connect(uri, options)
-  .catch(error => console.log(error));
-
-const connection = mongoose.connection;
-connection.once('open', () => {
-console.log("MongoDB database connection established successfully");
-});
-mongoose.connection.on('error', err => {
-  logError('mongoose connection error', err);
-});
 ```
 
 ## :cool: Backend Features
@@ -111,6 +97,7 @@ mongoose.connection.on('error', err => {
 ## :clap: Inspiration
 
 * [Javascript Mastery: Build and Deploy a Full Stack MERN Project - React + Redux, Node, Express, MongoDB [Part 1/2]](https://www.youtube.com/watch?v=ngc9gnGgUdA&t=3589s)
+* [Javascript Mastery: Build and Deploy a Full Stack MERN Project - React + Redux, Node, Express, MongoDB [Part 2/2]](https://www.youtube.com/watch?v=aibtHnbeuio&t=171s)
 * [React documentation](https://reactjs.org/docs/getting-started.html)
 * [REST API Tutorial website: HTTP Status Codes](https://www.restapitutorial.com/httpstatuscodes.html)
 
