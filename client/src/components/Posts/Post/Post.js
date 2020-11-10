@@ -13,9 +13,11 @@ import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import moment from 'moment';
 import { useDispatch } from 'react-redux';
 
+import { likePost, deletePost } from '../../../actions/posts';
 import useStyles from './styles';
 
-const Post = ({ post, setCurrent }) => {
+const Post = ({ post, setCurrentId }) => {
+	const dispatch = useDispatch();
 	const classes = useStyles();
 
 	return (
@@ -38,7 +40,7 @@ const Post = ({ post, setCurrent }) => {
 				<Button
 					style={{ color: 'white' }}
 					size="small"
-					// onClick={() => setCurrentId(post._id)}
+					onClick={() => setCurrentId(post._id)}
 				>
 					<MoreHorizIcon fontSize="default" />
 				</Button>
@@ -65,14 +67,14 @@ const Post = ({ post, setCurrent }) => {
 				<Button
 					size="small"
 					color="primary"
-					// onClick={() => dispatch(likePost(post._id))}
+					onClick={() => dispatch(likePost(post._id))}
 				>
 					<ThumbUpAltIcon fontSize="small" /> Like {post.likeCount}{' '}
 				</Button>
 				<Button
 					size="small"
 					color="primary"
-					// onClick={() => dispatch(deletePost(post._id))}
+					onClick={() => dispatch(deletePost(post._id))}
 				>
 					<DeleteIcon fontSize="small" /> Delete
 				</Button>
