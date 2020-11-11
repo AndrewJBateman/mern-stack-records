@@ -28,7 +28,7 @@
 
 ### :books: Backend
 
-* MongoDB Atlas used as the backend database - requires mongodb to be running (or use Mongoose and heroku mLab to access)
+* MongoDB cloud Atlas used as the backend database
 
 ### :books: Frontend
 

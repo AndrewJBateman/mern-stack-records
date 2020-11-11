@@ -22,7 +22,6 @@ const CONNECT_OPTIONS = {
 	useUnifiedTopology: true,
 };
 const PORT = process.env.PORT || 5000;
-console.log('url is: ', CONNECTION_URL);
 
 mongoose
 	.connect(CONNECTION_URL, CONNECT_OPTIONS)
