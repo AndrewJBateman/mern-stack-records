@@ -9,8 +9,6 @@ const Posts = () => {
 	const posts = useSelector((state) => state.posts);
 	const classes = useStyles();
 
-	console.log('posts array', posts);
-
 	return !posts.length ? (
 		<CircularProgress />
 	) : (

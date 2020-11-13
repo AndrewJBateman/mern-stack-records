@@ -6,7 +6,7 @@ import Posts from './components/Posts/Posts';
 import Form from './components/Form/Form';
 import { getPosts } from './actions/posts';
 import useStyles from './styles';
-import records from './images/records.png';
+import repair from './images/repair.png';
 
 const App = () => {
 	const [currentId, setCurrentId] = useState(0);
@@ -20,10 +20,10 @@ const App = () => {
 	return (
 		<Container maxWidth="lg">
 			<AppBar className={classes.appBar} position="static" color="inherit">
-				<Typography className={classes.heading} variant="h2" align="center">
-					Records
+				<Typography className={classes.heading} variant="h4" align="center">
+					Repairs
 				</Typography>
-				<img className={classes.image} src={records} alt="icon" height="60" />
+				<img className={classes.image} src={repair} alt="icon" height="50" />
 			</AppBar>
 			<Grow in>
 				<Container>
