@@ -20,6 +20,7 @@ const Form = ({ currentId, setCurrentId }) => {
 	const dispatch = useDispatch();
 	const classes = useStyles();
 
+	// if there is a post populate post values in form
 	useEffect(() => {
 		if (post) setPostData(post);
 	}, [post]);
@@ -40,11 +41,10 @@ const Form = ({ currentId, setCurrentId }) => {
 
 		if (currentId === 0) {
 			dispatch(createPost(postData));
-			clear();
 		} else {
 			dispatch(updatePost(currentId, postData));
-			clear();
 		}
+		clear();
 	};
 
 	return (
@@ -56,7 +56,7 @@ const Form = ({ currentId, setCurrentId }) => {
 				onSubmit={handleSubmit}
 			>
 				<Typography variant="h6">
-					{currentId ? `Editing "${post.title}"` : 'Creating a Memory'}
+					{currentId ? `Editing "${post.title}"` : 'Record The Extreme!'}
 				</Typography>
 				<TextField
 					name="creator"

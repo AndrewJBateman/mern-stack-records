@@ -1,9 +1,9 @@
 # :zap: MERN Full Stack Records
 
 * Mongo Express React Node (MERN) full-stack app to perform CRUD operations on records
-* Tutorial code from [JavaScript Mastery](https://www.youtube.com/channel/UCmXmlB4-HJytD7wek0Uo97A) - see 'Inspiration' below.
+* Tutorial code from [JavaScript Mastery](https://www.youtube.com/channel/UCmXmlB4-HJytD7wek0Uo97A) with some frontend changes - see 'Inspiration' below.
 
-*** Note: to open web links in a new window use: _ctrl+click on link_**
+**\* Note: to open web links in a new window use: _ctrl+click on link_**
 
 ## :page_facing_up: Table of contents
 
@@ -28,18 +28,20 @@
 
 ### :books: Backend
 
-* MongoDB cloud Atlas used as the backend database.
+* Node.js, Express & MongoDB cloud Atlas used to create the backend.
 
 ### :books: Frontend
 
 * React frontend form to add text/image data to backend database
 * Text & image data is displayed in ui-material cards
 * Display is responsive: uses Material-UI [Grid](https://material-ui.com/api/grid/)
-* Material-UI [makeStyles](https://material-ui.com/styles/api/#makestyles-styles-options-hook) used to link a style sheet with a function component using a hook.  `Grow`
+* Material-UI [makeStyles](https://material-ui.com/styles/api/#makestyles-styles-options-hook) used to link a style sheet with a function component using a hook. `Grow`
+* User can add likes to a record but there is no limit on the times they can add likes - a time delay could be added, or the user ip could be used to limit likes
 
 ## :camera: Screenshots
 
 ![screenshot](./img/front.png)
+![screenshot](./img/back.png)
 
 ## :signal_strength: Backend Technologies
 
@@ -79,10 +81,19 @@
 
 ## :computer: Code Examples
 
-* Extract from `` - tba
+* Extract from `server/controllers/posts.js` - to delete a post. The post id is [read from the route "parameter"](https://expressjs.com/en/guide/routing.html). A check is made to verify it is a valid id. If it is valid then the post is removed using the mongoose `findByIdAndRemove()` command
 
 ```javascript
+export const deletePost = async (req, res) => {
+	const { id } = req.params;
 
+	if (!mongoose.Types.ObjectId.isValid(id))
+		return res.status(404).send(`No post with id: ${id}`);
+
+	await PostMessage.findByIdAndRemove(id);
+
+	res.json({ message: 'Post deleted successfully.' });
+};
 ```
 
 ## :cool: Backend Features
@@ -92,11 +103,13 @@
 ### :cool: Frontend Features
 
 * Uses [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+*
+* UI-Material cards look good.
 
 ## :clipboard: Status & To-Do List
 
-* Status: In progress
-* To-Do: Finish
+* Status: Working. Not deployed
+* To-Do: Complete tutorial to deploy app to Heroku (video 2: 1.11.10)
 
 ## :clap: Inspiration
 
@@ -107,4 +120,4 @@
 
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://www.andrewbateman.org) * you are welcome to [send me a message](https://andrewbateman.org/contact)
+* Repo created by [ABateman](https://www.andrewbateman.org) - you are welcome to [send me a message](https://andrewbateman.org/contact)
