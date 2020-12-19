@@ -48,20 +48,20 @@
 * [Mongoose v5](https://mongoosejs.com/) object modelling for Node.js
 * [npm mongodb v3](https://www.npmjs.com/package/mongodb) official MongoDB driver for Node.js
 * [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) NoSQL cloud database service
-* [Express.js middleware v4.17](https://expressjs.com/): Note, as of version 4.16+, their own body-parser implementation is now included by default
+* [Express.js middleware v4](https://expressjs.com/): Note, as of version 4.16+, their own body-parser implementation is now included by default
 * [Node.js v14](https://nodejs.org/es/)
 * [Nodemon](https://www.npmjs.com/package/nodemon) npm module so backend server will automatically restart afdter code changes
 
 ## :signal_strength: Frontend Technologies
 
-* [React framework v16](https://reactjs.org/)
+* [React framework v17](https://reactjs.org/)
 * [React-Redux v7](https://react-redux.js.org/) store interaction logic, re-render only changed data
-* [Redux-Thunk](https://www.npmjs.com/package/redux-thunk) middleware for Redux to write action creators that return an (asynchronous) function instead of an action.
-* [Material-UI](https://www.npmjs.com/package/@material-ui/core) npm module for React components
+* [Redux-Thunk v2](https://www.npmjs.com/package/redux-thunk) middleware for Redux to write action creators that return an (asynchronous) function instead of an action.
+* [Material-UI v4](https://www.npmjs.com/package/@material-ui/core) npm module for React components
 * [Material-UI Official Site](https://material-ui.com/)
 * [Bootstrap v4](https://getbootstrap.com/) component library
-* [react-file-base64](https://www.npmjs.com/package/react-file-base64) to convert files to base64
-* [Axios](https://www.npmjs.com/package/axios) promise-based http client
+* [react-file-base64 v1](https://www.npmjs.com/package/react-file-base64) to convert files to base64
+* [Axios v0.21.0](https://www.npmjs.com/package/axios) promise-based http client
 * [SVG Backgrounds](https://www.svgbackgrounds.com/) source of custom backgrounds with compact file-size (~5KB) & supported by all modern browsers
 
 ## :floppy_disk: Setup - Backend
@@ -98,12 +98,11 @@ export const deletePost = async (req, res) => {
 
 ## :cool: Backend Features
 
-* All data stored in collections in a mongoDB.Atlas database that costs nothing to use in the free tier option. Data can be edited from the mongoDB.Atlas collection or from within the React frontend
+* All data stored in collections in a mongoDB Atlas database that costs nothing to use in the free tier option. Data can be edited from the mongoDB Atlas collection or from within the React frontend
 
 ### :cool: Frontend Features
 
 * Uses [React Hooks](https://reactjs.org/docs/hooks-intro.html)
-*
 * UI-Material cards look good.
 
 ## :clipboard: Status & To-Do List
