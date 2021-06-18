@@ -2,8 +2,12 @@
 
 * Mongo Express React Node (MERN) full-stack app to perform CRUD operations on records
 * Tutorial code from [JavaScript Mastery](https://www.youtube.com/channel/UCmXmlB4-HJytD7wek0Uo97A) with some frontend changes - see 'Inspiration' below.
+* **Note:** to open web links in a new window use: _ctrl+click on link_
 
-**\* Note: to open web links in a new window use: _ctrl+click on link_**
+![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/mern-stack-records?style=plastic)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/AndrewJBateman/mern-stack-records?style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/AndrewJBateman/mern-stack-records?style=plastic)
+![GitHub last commit](https://img.shields.io/github/last-commit/AndrewJBateman/mern-stack-records?style=plastic)
 
 ## :page_facing_up: Table of contents
 
@@ -117,6 +121,10 @@ export const deletePost = async (req, res) => {
 * [React documentation](https://reactjs.org/docs/getting-started.html)
 * [REST API Tutorial website: HTTP Status Codes](https://www.restapitutorial.com/httpstatuscodes.html)
 
+## :file_folder: License
+
+* N/A.
+
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://www.andrewbateman.org) - you are welcome to [send me a message](https://andrewbateman.org/contact)
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com
